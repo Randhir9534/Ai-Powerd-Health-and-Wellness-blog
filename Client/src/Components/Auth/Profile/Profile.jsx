@@ -44,7 +44,7 @@ const ProfilePage = () => {
   }
 
   const imageUrl = user?.image
-    ? `http://localhost:9001/${user.image.replace(/\\/g, "/")}`
+    ? `https://ai-powerd-health-and-wellness-blog.onrender.com/${user.image.replace(/\\/g, "/")}`
     : "https://via.placeholder.com/150";
 
   return (
