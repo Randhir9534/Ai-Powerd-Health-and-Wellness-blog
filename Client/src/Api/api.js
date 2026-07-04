@@ -1,4 +1,4 @@
-const base_url="http://localhost:9001/";
+const base_url=`${process.env.REACT_APP_API_URL}/`;
 export const end_points={
     // Auth
     Register:"api/auth/register",
