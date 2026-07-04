@@ -157,7 +157,7 @@ const ReviewPage = () => {
                   <div className="review-author">
                     <img
                       className="review-author-avatar"
-                      src={`http://localhost:9001/${review.userImg}`}
+                      src={`https://ai-powerd-health-and-wellness-blog.onrender.com/${review.userImg}`}
                       alt={review.userName}
                     />
                     <span className="review-author-name">
