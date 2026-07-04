@@ -99,7 +99,7 @@ const BookmarkPage = () => {
                   >
                     <Avatar
                       variant="rounded"
-                      src={`http://localhost:9001/${blog.image}`}
+                      src={`https://ai-powerd-health-and-wellness-blog.onrender.com/${blog.image}`}
                       alt={blog.title}
                       sx={{
                         width: { xs: 65, sm: 80 },
