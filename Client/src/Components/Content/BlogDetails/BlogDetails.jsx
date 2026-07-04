@@ -257,7 +257,7 @@ const BlogDetailPage = () => {
                   <CardMedia
                     component="img"
                     height="170"
-                    image={`http://localhost:9001/${relatedBlog.image}`}
+                    image={`https://ai-powerd-health-and-wellness-blog.onrender.com/${relatedBlog.image}`}
                     alt={relatedBlog.title}
                     className="related-card-media"
                   />
