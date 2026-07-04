@@ -140,7 +140,7 @@ const ReviewPage = () => {
                   <div className="review-card-top">
                     <img
                       className="review-blog-thumb"
-                      src={`http://localhost:9001/${review.blogImg}`}
+                      src={`https://ai-powerd-health-and-wellness-blog.onrender.com/${review.blogImg}`}
                       alt={review.blogTitle}
                     />
                     <p className="review-blog-title">
