@@ -1,0 +1,272 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.register-page{
+
+    width:100%;
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:60px 20px 60px;
+
+    background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url("../../../../public/registraion.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+
+    overflow:hidden;
+    position:relative;
+}
+
+.register-page::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:420px;
+    height:420px;
+
+    border-radius:50%;
+
+    background:rgba(0,255,150,.15);
+
+    top:-120px;
+    left:-120px;
+
+    filter:blur(90px);
+
+    animation:move1 8s infinite alternate ease-in-out;
+
+}
+
+.register-page::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:320px;
+    height:320px;
+
+    border-radius:50%;
+
+    background:rgba(0,170,255,.15);
+
+    right:-100px;
+    bottom:-100px;
+
+    filter:blur(90px);
+
+    animation:move2 9s infinite alternate ease-in-out;
+
+}
+
+@keyframes move1{
+
+    from{
+        transform:translateY(0);
+    }
+
+    to{
+        transform:translateY(120px);
+    }
+
+}
+
+@keyframes move2{
+
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(-120px);
+    }
+
+}
+
+.register-container{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    width:100%;
+
+}
+
+.register-box{
+
+    width:100%;
+    max-width:520px;
+
+    padding:26px 28px;
+
+    border-radius:22px;
+
+    backdrop-filter:blur(18px);
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    box-shadow:0 15px 45px rgba(0,0,0,.45);
+
+    animation:floatCard 4s ease-in-out infinite;
+
+    transition:.4s;
+
+    z-index:5;
+
+}
+
+.register-box:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 0 35px rgba(124,252,152,.25);
+
+}
+
+@keyframes floatCard{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-8px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+
+.register-title{
+
+    text-align:center;
+
+    color:white;
+
+    font-weight:700!important;
+
+    margin-bottom:6px!important;
+
+    letter-spacing:1px;
+
+    font-size:2rem!important;
+
+}
+
+.register-subtitle{
+
+    text-align:center;
+
+    color:#d7d7d7;
+
+    margin-bottom:18px!important;
+
+    font-size:.95rem!important;
+
+}
+
+.MuiTextField-root{
+
+    margin-top:8px!important;
+    margin-bottom:8px!important;
+
+}
+
+.register-btn{
+
+    margin-top:10px!important;
+
+    height:46px;
+
+    border-radius:12px!important;
+
+    background:linear-gradient(90deg,#00c853,#00e676)!important;
+
+    font-size:15px!important;
+
+    font-weight:bold!important;
+
+    transition:.35s!important;
+
+}
+
+.register-btn:hover{
+
+    transform:scale(1.03);
+
+    box-shadow:0 0 20px rgba(0,230,118,.45)!important;
+
+}
+
+.login-link{
+
+    margin-top:16px;
+
+    text-align:center;
+
+    color:white;
+
+    font-size:15px;
+
+}
+
+.login-link a{
+
+    text-decoration:none;
+
+    color:#7CFC98;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.login-link a:hover{
+
+    letter-spacing:1px;
+
+}
+
+@media(max-width:600px){
+
+    .register-page{
+
+        padding:80px 15px 40px;
+
+    }
+
+    .register-box{
+
+        max-width:100%;
+
+        padding:22px 18px;
+
+        margin:10px;
+
+    }
+
+    .register-title{
+
+        font-size:1.8rem!important;
+
+    }
+
+}

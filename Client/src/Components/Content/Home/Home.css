@@ -1,0 +1,282 @@
+.light-mode {
+  background:linear-gradient(to bottom right,#f1f8e9, #cff0d2);
+  color: #333;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+
+.hero-section {
+  background-image:
+    linear-gradient(180deg, rgba(8, 18, 14, 0.6) 0%, rgba(8, 18, 14, 0.8) 100%),
+    url('../../../../public/hero.avif');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 140px 20px 110px;
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 560px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section .MuiContainer-root {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Eyebrow badge */
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #f3fff6;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 7px 18px;
+  border-radius: 999px;
+  margin-bottom: 22px;
+  backdrop-filter: blur(4px);
+}
+
+.hero-badge svg {
+  font-size: 16px;
+}
+
+/* Title with per-character spans for the entrance animation */
+.hero-title {
+  font-weight: 800;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 0 6px 30px rgba(0, 0, 0, 0.35);
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.hero-title .char {
+  display: inline-block;
+}
+
+.hero-subtitle {
+  text-align: center;
+  margin-top: 16px;
+  max-width: 560px;
+  color: rgba(255, 255, 255, 0.88);
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.hero-cta {
+  margin-top: 32px !important;
+  background: linear-gradient(135deg, #3f9142, #2e7d32) !important;
+  color: #fff !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.03em;
+  padding: 12px 34px !important;
+  border-radius: 999px !important;
+  box-shadow: 0 14px 28px -12px rgba(46, 125, 50, 0.5) !important;
+  text-transform: none !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.hero-cta:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 18px 36px -10px rgba(46, 125, 50, 0.8) !important;
+}
+
+/* Ambient glow — soft, blurred, low-opacity (professional accent, not a gimmick) */
+.hero-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-glow-1 {
+  top: -10%;
+  left: 8%;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(120, 200, 150, 0.22) 0%, rgba(120, 200, 150, 0) 70%);
+}
+
+.hero-glow-2 {
+  bottom: -15%;
+  right: 6%;
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, rgba(90, 170, 200, 0.16) 0%, rgba(90, 170, 200, 0) 70%);
+}
+
+/* Scroll-down cue */
+.hero-scroll-cue {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #fff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.hero-scroll-cue:hover {
+  background: rgba(255, 255, 255, 0.22);
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 768px) {
+
+  .hero-section {
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center center;
+
+    min-height: 100vh;
+    padding: 100px 20px 80px;
+  }
+
+  .hero-title {
+    font-size: 2.4rem !important;
+    line-height: 1.2 !important;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem !important;
+    max-width: 100%;
+    line-height: 1.7;
+  }
+
+  .hero-cta {
+    padding: 12px 28px !important;
+    font-size: 1rem !important;
+  }
+
+  .hero-glow-1,
+  .hero-glow-2 {
+    width: 170px;
+    height: 170px;
+    filter: blur(45px);
+  }
+}
+
+/* ==========================================================================
+   Rest of page (unchanged)
+   ========================================================================== */
+
+.filter-section {
+  display: flex;
+  gap: 12px;
+  margin: 20px 0;
+  justify-content: flex-start;
+}
+
+.blog-card {
+  transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.home-container {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  /* background-color: #e9ecef; Soft background for a modern look */
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight:bolder;
+  color: #4caf50; /* Darker text for better readability */
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem; /* Larger title */
+}
+
+.filter-input {
+  margin-right: 8px;
+  width: 300px; /* Fixed width for the input */
+  border-radius: 20px; /* Rounded input */
+  border: 1px solid #4CAF50; /* Green border */
+}
+
+.filter-input .MuiOutlinedInput-notchedOutline {
+  border-color: #4CAF50; /* Green border for the input */
+}
+
+.filter-input:focus {
+  border-color: #388E3C; /* Darker green on focus */
+}
+
+.blog-title {
+  font-weight: bold; /* Bold title */
+  color: #4CAF50; /* Primary color for titles */
+  font-size: 1.5rem; /* Title size */
+}
+
+.blog-content {
+  color: #666; /* Lighter text for content */
+  flex-grow: 1; /* Allow content to grow */
+}
+
+.blog-tag {
+  margin-right: 4px;
+  margin-bottom: 4px;
+  background-color: #4CAF50; /* Tag background color */
+  color: white; /* Tag text color */
+  border-radius: 12px; /* Rounded tags */
+  padding: 5px 10px; /* Padding for tags */
+  font-size: 0.8rem; /* Smaller font for tags */
+}
+
+/* Ensure consistent card width */
+.grid-item {
+  display: flex;
+  justify-content: center; /* Center cards in grid */
+}
+
+@media (min-width: 600px) {
+  .blog-card {
+    width: 100%; /* Full width on larger screens */
+    max-width: 350px; /* Max width for cards */
+  }
+}
+
+@media (max-width: 600px) {
+  .blog-card {
+    width: 100%; /* Full width on smaller screens */
+  }
+}

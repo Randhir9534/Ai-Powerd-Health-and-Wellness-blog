@@ -1,0 +1,30 @@
+.cta-section {
+  background: linear-gradient(to right, #236925,#388E3C);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.cta-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 16px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.cta-text {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 24px;
+}
+
+.button {
+  transition: all 0.3s ease;
+}
+
+.cta-button2:hover {
+  box-shadow: 0 10px 30px rgba(56, 142, 60, 0.5);
+  transform: scale(1.05);
+}
+
+

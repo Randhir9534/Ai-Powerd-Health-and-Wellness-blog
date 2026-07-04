@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Category Management</title>
+    <link
+      href="/vendor/fontawesome-free/css/all.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link href="/stylesheet/css/sb-admin-2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/styles.css">
+
+  </head>
+
+  <body id="page-top">
+    <div id="wrapper">
+      <!-- Sidebar -->
+      <%- include("layout/sidebar.ejs") %>
+      <!-- End of Sidebar -->
+
+      <div id="content-wrapper" class="d-flex flex-column">
+        <div id="content">
+          <%- include('layout/topbar.ejs') %>
+
+          <div class="container-fluid">
+            <h1 class="h3 mb-4 text-center animated-heading">Manage Categories</h1>
+            <% if (success_msg && success_msg.length > 0) { %>
+            <div class="alert alert-success text-center my-3">
+              <%= success_msg %>
+            </div>
+            <% } else if (error_msg && error_msg.length > 0) { %>
+            <div class="alert alert-danger text-center my-3">
+              <%= error_msg %>
+            </div>
+            <% } %>
+
+            <form action="/categories/create" method="POST" class="mb-4">
+              <div class="form-group text-dark">
+                <label for="name">Category Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  name="name"
+                  required
+                />
+              </div>
+              <div class="form-group text-dark">
+                <label for="description">Category Description</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="description"
+                  name="description"
+                  required
+                />
+              </div>
+              <button type="submit" class="btn btn-success">
+                Add Category
+              </button>
+            </form>
+
+            <table class="table table-bordered text-dark">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Description</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% data.forEach(category => { %>
+                <tr class="text-dark">
+                  <td><%= category.name %></td>
+                  <td><%= category.description %></td>
+                  <td>
+                    <a
+                      href="/categories/delete/<%= category._id %>"
+                      class="btn btn-danger btn-sm"
+                      >Delete</a
+                    >
+                  </td>
+                </tr>
+                <% }) %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <%- include('layout/footer') %>
+      </div>
+    </div>
+
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="/js/sb-admin-2.min.js"></script>
+  </body>
+</html>

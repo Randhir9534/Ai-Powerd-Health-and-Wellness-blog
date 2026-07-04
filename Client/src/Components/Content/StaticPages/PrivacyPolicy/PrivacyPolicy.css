@@ -1,0 +1,46 @@
+.light-mode {
+  background:linear-gradient(to bottom right,#f1f8e9, #cff0d2);
+  color: #333;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+  transition: background-color 0.5s, color 0.5s;
+}
+.heading {
+  font-weight: 700;
+  color: #2e7d32;
+  text-align: center;
+}
+
+.subtitle {
+  color: #666;
+}
+
+.privacy-image {
+  width: 100%; /* Full width */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 350px; /* Fixed max width */
+  margin: 0 auto; /* Center the image */
+  padding: 10px; /* Add padding around the image */
+  border-radius: 8px; /* Optional: rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: shadow effect */
+  transition:all 2s ease;
+}
+.privacy-image:hover{
+ transform: translateY(-10px);
+}
+.privacy-section-list{
+  margin-left: 15%;
+}
+.privacy-section-list ul li{
+  text-align: left;
+}
+.privacy-section-list2{
+  margin-right: 14%;
+}
+.privacy-section-list2 ul li{
+  text-align: left;
+}

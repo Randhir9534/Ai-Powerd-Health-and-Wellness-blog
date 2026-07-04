@@ -1,0 +1,125 @@
+/* DietPlanResult.css */
+
+.diet-header {
+  padding: 24px;
+  margin-bottom: 24px;
+  border-radius: 16px;
+  color: #fff;
+  background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+  box-shadow: 0 10px 25px -8px rgba(22, 163, 74, 0.45);
+}
+
+.diet-header-label {
+  opacity: 0.85;
+  letter-spacing: 1.5px;
+}
+
+.diet-header-summary {
+  opacity: 0.95;
+}
+
+.diet-accordion {
+  margin-bottom: 12px;
+  border-radius: 12px !important;
+  overflow: hidden;
+  border: 1px solid #e0e0e0;
+  box-shadow: none !important;
+  transition: border-color 0.2s ease;
+}
+
+.diet-accordion:before {
+  display: none;
+}
+
+.diet-accordion:hover {
+  border-color: #16a34a;
+}
+
+.diet-accordion-summary {
+  background-color: #fafafa;
+}
+
+.diet-accordion-summary:hover {
+  background-color: #effdf4;
+}
+
+.diet-day-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.diet-day-badge {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #16a34a;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.diet-day-title {
+  flex-grow: 1;
+  font-weight: 600;
+}
+
+.diet-calorie-chip {
+  background-color: #fff7ed !important;
+  color: #c2410c !important;
+  font-weight: 600 !important;
+  border: 1px solid #fed7aa !important;
+}
+
+.diet-calorie-chip .MuiChip-icon {
+  color: #ea580c !important;
+}
+
+.diet-meal {
+  margin-bottom: 16px;
+}
+
+.diet-meal-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.diet-meal-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: color-mix(in srgb, var(--meal-color) 10%, transparent);
+  color: var(--meal-color);
+}
+
+.diet-meal-title {
+  font-weight: 600;
+}
+
+.diet-meal-chip {
+  margin-left: auto !important;
+  border-color: var(--meal-color) !important;
+  color: var(--meal-color) !important;
+}
+
+.diet-meal-desc {
+  padding-left: 36px;
+}
+
+.diet-disclaimer {
+  margin-top: 24px;
+  border-radius: 12px !important;
+  align-items: center !important;
+  background-color: #fffbeb !important;
+  border: 1px solid #fde68a;
+}
