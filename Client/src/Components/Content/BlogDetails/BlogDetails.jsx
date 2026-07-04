@@ -172,7 +172,7 @@ const BlogDetailPage = () => {
         <Box className="blog-hero-wrap">
           <img
             className="blog-hero-image"
-            src={`http://localhost:9001/${blog.image}`}
+            src={`https://ai-powerd-health-and-wellness-blog.onrender.com/${blog.image}`}
             alt={blog.title}
           />
         </Box>
