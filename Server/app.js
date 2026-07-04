@@ -22,7 +22,9 @@ dotenv.config();
 connectDB()
 
 // cors for connect with react
-app.use(cors())
+app.use(cors({
+  origin:"https://ai-powerd-health-and-wellness-blog-eight.vercel.app"
+}))
 
 app.use(express.urlencoded({ extended: true })); 
 app.use(express.json()); 
