@@ -16,6 +16,7 @@ class AuthController {
         // const token = generateToken(user);
 
         res.status(201).json({ data:user,message:"Registration successfully" });
+        return res.redirect("/login");
     }
     // ============ Log in ===========
     async login(req, res) {
