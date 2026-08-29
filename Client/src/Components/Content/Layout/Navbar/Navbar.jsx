@@ -162,7 +162,7 @@ function Navbar() {
                 </MenuItem>
               ))}
             <hr />
-            <a style={{textDecoration:"none", color:"green" , marginLeft:"12%" }} target="_blank" rel="noreferrer" href="http://localhost:9001/">Admin</a>
+            <a style={{textDecoration:"none", color:"green" , marginLeft:"12%" }} target="_blank" rel="noreferrer" href="https://ai-powerd-health-and-wellness-blog.onrender.com/">Admin</a>
             </Menu>
           </Box>
         </Toolbar>
